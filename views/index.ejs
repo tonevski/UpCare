@@ -1,1 +1,121 @@
-<%- include('./partials/header'); %> Index <%- include('./partials/footer'); %>
+<%- include('./partials/header'); %>
+
+<section id="hero" class="container">
+  <img src="images/up.svg" alt="UpCare" />
+  <h1><span>UpCare - </span> Website availability monitoring.</h1>
+  <p class="lead">UpCare is under active development. Please enter your email address to receive an early access and lifetime benefits.</p>
+
+  <% if (locals.auth) { %>
+  <a href="/monitors" role="button">Monitors</a>
+
+  <% } else if (locals.registered) { %>
+  <a href="/login" role="button">Login</a>
+  <a href="/register" role="button">Register</a>
+
+  <% } else { %>
+  <form id="signup-form" action="">
+    <input type="email" id="email" name="email" placeholder="Email address" required />
+    <button id="signup-btn" type="submit" aria-busy="false">Request Access</button>
+    <small id="signup-response">We'll never share your email with anyone else.</small>
+  </form>
+  <% } %>
+</section>
+<section id="features" class="container">
+  <div class="title-bar"><progress value="100" max="100"></progress></div>
+  <h2>Features</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+  <div class="grid">
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Status</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Load Time</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Ping</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>SSL</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Keywords <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Broken Links <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Blacklist Lookup <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Performance <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="feature">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Security <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+  </div>
+</section>
+<section id="integrations" class="container">
+  <div class="title-bar"><progress value="100" max="100"></progress></div>
+  <h2>Integrations</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam</p>
+  <div class="grid">
+    <div class="integration">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Email</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="integration">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>SMS</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="integration">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>iOS App <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+    <div class="integration">
+      <img src="images/up.svg" alt="UpCare" />
+      <h3>Android App <sup>SOON</sup></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor eget nisi at aliquam.</p>
+    </div>
+  </div>
+</section>
+<section id="contact" class="container">
+  <div class="title-bar"><progress value="100" max="100"></progress></div>
+  <h2>Contact</h2>
+  <p class="lead">Send as a message, report a bug, or just say Hi :)</p>
+  <form id="contact-form" action="">
+    <div class="grid">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="email" id="email" name="email" placeholder="Email address" required />
+    </div>
+    <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
+    <button id="contact-btn" type="submit" aria-busy="false">Submit</button>
+    <small id="contact-response">We'll never share your email with anyone else.</small>
+  </form>
+</section>
+
+<%- include('./partials/footer'); %>

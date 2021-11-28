@@ -1,0 +1,15 @@
+<%- include('../partials/header'); %>
+<section class="container page-title">
+  <h1>Add Monitor</h1>
+  <p class="lead">Add website you want to monitor</p>
+</section>
+<section class="container">
+  <form id="monitor-form">
+    <input type="text" id="name" name="name" placeholder="Google" />
+    <input type="text" id="website" name="website" placeholder="google.com" />
+    <small>Enter just the domain name: google.com</small>
+    <input type="submit" value="Add Monitor" />
+    <div id="response">&nbsp;</div>
+  </form>
+</section>
+<%- include('../partials/footer'); %>

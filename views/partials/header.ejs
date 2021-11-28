@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UpCare - Website monitoring application</title>
     <meta name="title" content="UpCare - Website monitoring application" />
-    <meta name="description" content="Monitor your website availability and performance." />
 
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="/css/pico.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/script.js"></script>
   </head>
-
   <body>
+    <section id="header" class="container-fluid">
+      <nav>
+        <ul>
+          <li>
+            <a href="/"><strong>UpCare <sup>BETA</sup></a></strong>
+          </li>
+        </ul>
+        <ul>
+          <% if (locals.auth) { %>
+          <li><a href="/monitors">Monitors</a></li>
+          <li><a href="/stats">Stats</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/logout">Logout</a></li>
+          <% } else { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <% } %>
+        </ul>
+      </nav>
+    </section>
+
+    

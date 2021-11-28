@@ -1,0 +1,56 @@
+<%- include('../partials/header.ejs') %>
+
+<section id="monitors" class="container">
+   <hgroup>
+      <h1>Monitors</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+   </hgroup>
+
+    <figure>
+       <table role="grid">
+          <thead>
+             <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Domain</th>
+                <th scope="col">Status</th>
+                <th scope="col">Enabled</th>
+             </tr>
+          </thead>
+          <tbody>
+             <tr>
+                <td>Apple</td>
+                <td>apple.com</td>
+                <td>
+                   <ins>UP<ins>
+                </td>
+                <td>
+                   <input type="checkbox" id="switch" name="switch" role="switch" checked />
+                </td>
+             </tr>
+             <tr>
+                <td>Google</td>
+                <td>google.com</td>
+                <td>
+                   <ins>UP<ins>
+                </td>
+                <td>
+                   <input type="checkbox" id="switch" name="switch" role="switch" checked />
+                </td>
+             </tr>
+             <tr>
+                <td>Amazon</td>
+                <td>amazon.com</td>
+                <td>
+                   <ins>UP<ins>
+                </td>
+                <td>
+                   <input type="checkbox" id="switch" name="switch" role="switch" checked />
+                </td>
+             </tr>
+          </tbody>
+       </table>
+       <p><a href="/monitors/new" role="button" style="width: 250px;" >Add Monitor</a></p>
+    </figure>
+ </section>
+
+ <%- include('../partials/footer.ejs') %>

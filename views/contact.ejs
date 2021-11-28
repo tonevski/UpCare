@@ -1,0 +1,20 @@
+<%- include('./partials/header'); %>
+
+<section class="container page-title">
+  <h1>Contact</h1>
+  <p class="lead">Send as a message, report a bug, or just say Hi :)</p>
+</section>
+
+<section class="container">
+  <form id="contact-form" action="">
+    <div class="grid">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="email" id="email" name="email" placeholder="Email address" required />
+    </div>
+    <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
+    <button id="contact-btn" type="submit" aria-busy="false">Submit</button>
+    <small id="contact-response">We'll never share your email with anyone else.</small>
+  </form>
+</section>
+
+<%- include('./partials/footer'); %>

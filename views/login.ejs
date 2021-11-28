@@ -1,0 +1,20 @@
+<%- include('./partials/header'); %>
+
+<section class="container page-title">
+  <h1>Login</h1>
+  <p class="lead">Log in to your UpCare account or <a href="/register">click here</a> to register.</p>
+</section>
+
+<section class="container">
+  <form id="login-form">
+    <input type="email" id="email" name="email" placeholder="Email address" />
+    <input type="password" id="password" name="password" placeholder="Password" />
+    <fieldset>
+      <label for="remember-me"><input type="checkbox" id="remember-me" name="remember-me" role="switch" checked />Remember me</label>
+    </fieldset>
+    <input type="submit" value="Login" />
+    <div id="response">&nbsp;</div>
+  </form>
+</section>
+
+<%- include('./partials/footer'); %>
